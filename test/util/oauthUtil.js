@@ -202,7 +202,6 @@ define(function(require) {
         if (opts.autoRefresh) {
           return;
         }
-
         var expectedResp = opts.expectedResp || defaultResponse;
         validateResponse(res, expectedResp);
       })
