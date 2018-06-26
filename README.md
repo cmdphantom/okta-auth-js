@@ -1505,7 +1505,7 @@ authClient.tokenManager.get('idToken')
 .then(function(token) {
   if (token) {
     // Token is valid
-    doSomethingWith(token);
+    console.log(token);
   } else {
     // Token has expired
   }
@@ -1541,12 +1541,12 @@ Manually refresh a token before it expires.
 // by using the returned Promise:
 authClient.tokenManager.refresh('idToken')
 .then(function (newToken) {
-  // doSomethingWith(newToken);
+  console.log(newToken);
 });
 
 // Alternatively, you can subscribe to the 'refreshed' event:
 authClient.tokenManager.on('refreshed', function (key, newToken, oldToken) {
-  // doSomethingWith(newToken);
+  console.log(newToken);
 });
 authClient.tokenManager.refresh('idToken');
 ```
